@@ -11,6 +11,10 @@ app.use(requestIp.mw());
 app.set('trust proxy', true);
 
 
+app.get('/', async (req, res) => {
+
+    res.send("Successfull")
+})
 app.get('/api/hello', async (req, res) => {
     try {
         const visitorName = req.query.visitor_name;
